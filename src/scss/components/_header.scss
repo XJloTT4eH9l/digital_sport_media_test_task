@@ -1,6 +1,11 @@
 .header {
     background-color: var(--white-color);
     padding: 25px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 50;
     &__inner {
         @include flex-all-sb;
     }
@@ -25,6 +30,7 @@
         background-color: var(--white-color);
         z-index: 100;
         transition: left .4s ease-in;
+        overflow-y: auto;
         &--active {
             left: 0;
         }

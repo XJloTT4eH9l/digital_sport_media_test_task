@@ -27,6 +27,7 @@ dd {
 }
 
 body {
+  padding-top: 80px;
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
@@ -119,7 +120,7 @@ button {
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   right: 0;
