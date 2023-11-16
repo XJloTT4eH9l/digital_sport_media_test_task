@@ -1,0 +1,266 @@
+.schedule {
+    &__heading {
+        &--leagues {
+            position: relative;
+            top: 6px;
+        }
+        @media screen and (max-width: 1130px) {
+           text-align: center;
+           display: block;
+        }
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        @media screen and (max-width: 1130px) {
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+    }
+    &__leagues {
+        width: 300px;
+        @media screen and (max-width: 1130px) {
+            margin: 0 auto;
+        }
+        @media screen and (max-width: 400px) {
+            width: auto;
+        }
+    }
+    &__leagues-container {
+        margin-top: 25px;
+        padding: 16px;
+        border-radius: 12px;
+        background-color: var(--white-color);
+    }
+    &__leagues-item {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-weight: 600;
+            transition: color .2s linear;
+        }
+        & a {
+            @include flex-v-center;
+            &:hover {
+                h3 {
+                    color: var(--blue-main-color);
+                }
+            }
+        }
+        & img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+    }
+    &__leagues-btn {
+        margin: 0 auto;
+        margin-top: 25px;
+        display: block;
+        border-radius: 20px;
+        padding: 10px 44px;
+        background-color: var(--blue-light-color);
+        color: var(--white-color);
+        font-weight: 900;
+        transition: background-color .2s linear;
+        &:hover {
+            background-color: var(--blue-main-color);
+        }
+    }
+    &__days {
+        @include flex-all-sb;
+        @media screen and (max-width: 1130px) {
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+    &__filters {
+        position: relative;
+        top: 5px;
+        margin-left: 0;
+        display: flex;
+        @media screen and (max-width: 550px) {
+            width: 100%;
+            overflow-x: scroll;
+        }
+    }
+    &__calendar {
+        position: relative;
+        top: -3px;
+        @include flex-all-center;
+        gap: 8px;
+        color: var(--blue-main-color);
+        font-weight: 900;
+        transition: background-color .2s linear;
+        padding: 6px 8px;
+        border-radius: 40px;
+        &:hover {
+            background-color: var(--white-color);
+        }
+    }
+    &__matches { 
+        flex: 0 0 70%;
+    }
+    &__matches-list {
+        margin-top: 25px;
+    }
+    &__matches-item {
+        padding: 14px 16px;
+        background-color: var(--white-color);
+        border-radius: 12px;
+        position: relative;
+        @media screen and (max-width: 750px) {
+            padding: 14px 0;
+        }
+        &:not(:last-child) {
+            margin-bottom: 4px;
+        }
+        a {
+            @include flex-all-sb;
+            @media screen and (max-width: 750px) {
+                flex-direction: column;
+                align-items: start;
+            }
+        }
+
+    }
+    &__text {
+        width: 128px;
+        color: var(--grey-color);
+        &--live {
+            color: var(--orange-color);
+            & strong {
+                font-weight: 700;
+                margin-right: 12px;
+            }
+        }
+        @media screen and (max-width: 750px) {
+            width: 100%;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #ecedf2;
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-bottom: 8px;
+        }
+    }
+    &__teams {
+        @include flex-all-sb;
+        text-align: right;
+        gap: 8px;
+        @media screen and (max-width: 750px) {
+            flex-direction: column;
+            align-items: start;
+            margin-top: 12px;
+            padding: 0 16px;
+            width: 100%;
+            min-width: 0;
+        }
+
+    }
+    &__team {
+       display: flex;
+       align-items: center;
+       gap: 8px;
+        & img {
+            width: 28px;
+            height: 28px;
+        }
+        &--reverse {
+            flex-direction: row-reverse;
+            @media screen and (max-width: 750px) {
+                flex-direction: row;
+            }
+        }
+        @media screen and (max-width: 750px) {
+            flex-direction: row-reverse;
+        }
+    }
+    &__mobile-team {
+        @media screen and (max-width: 750px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__team-title {
+        width: 140px;
+        text-align: right;
+        &--reverse {
+            text-align: left !important;
+        }
+        @media screen and (max-width: 750px) {
+            width: auto;
+        }
+    }
+    &__score {
+        font-size: 18px;
+        font-weight: 900;
+        color: var(--grey-color);
+        opacity: 0.3;
+        & span {
+            display: inline-block;
+        }
+        &--live {
+            color: var(--orange-color);
+            opacity: 1;
+            font-weight: 900;
+        }
+        &--ended {
+            color: var(--black-color);
+            opacity: 1;
+        }
+        &--mobile {
+            display: none;
+        }
+        @media screen and (max-width: 750px) {
+            display: none;
+            &--mobile {
+                position: absolute;
+                display: block;
+                right: 20px;
+            }
+        }
+    }
+    &__old-score {
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--grey-color);
+        &--mob {
+            font-size: 18px;
+            right: 50px;
+        }
+    }
+    &__score-item-left {
+        width: 28px;
+        text-align: right;
+    }
+    &__score-item-right {
+        width: 28px;
+        text-align: left;
+    }
+    &__predict {
+        display: flex;
+        align-items: center;
+        color: var(--blue-main-color);
+        font-weight: 700;
+        border-radius: 40px;
+        padding: 6px 8px;
+        transition: background-color .2s linear;
+        &:hover {
+            background-color: #f2f6ff;
+        }
+        & img {
+            margin-right: 2px;
+        }
+        &--disable {
+            visibility: hidden;
+        }
+        @media screen and (max-width: 750px) {
+            position: absolute;
+            right: 16px;
+            top: 5px;
+        }
+    }
+}

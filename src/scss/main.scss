@@ -1,0 +1,12 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "reset";
+
+//small componnets
+@import './components/nav';
+
+//sections
+@import "./components/header";
+@import './components/forecasts';
+@import './components/schedule';
